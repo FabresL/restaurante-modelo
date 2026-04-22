@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seu Restaurante | Cardápio</title>
+  <!-- Links para fontes do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Link para o arquivo CSS específico da página do cardápio -->
+  <link rel="stylesheet" href="src/css/cardapio.css">
+</head>
+<body>
+  <!-- Cabeçalho do site com navegação -->
+  <header class="cabecalho-site">
+    <div class="container navegacao">
+      <!-- Logo do restaurante com link para a página inicial -->
+      <a class="logo-marca" href="index.html">Seu Restaurante</a>
+      <!-- Menu de navegação -->
+      <ul>
+        <li><a class="ativo" href="cardapio.html">Cardápio</a></li>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#sobre">Contato</a></li>
+      </ul>
+      <!-- Botão para fazer reserva via WhatsApp -->
+      <a class="botao botao-primario" href="https://wa.me/5551998806267?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener noreferrer">Reservar</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Seção hero do cardápio -->
+    <section class="hero-cardapio">
+      <div class="container">
+        <!-- Título da página do cardápio -->
+        <h1 style="text-align:center;">Cardápio Completo</h1>
+        <!-- Descrição da página -->
+        <p style="text-align:center; margin: 0 auto;">Seleção exclusiva da casa com entradas, principais, sobremesas e bebidas para todos os momentos.</p>
+      </div>
+    </section>
+
+    <!-- Seção com as categorias do cardápio -->
+    <section class="secao">
+      <div class="container grade">
+        <!-- Cardápio de entradas -->
+        <article class="card-categoria">
+          <h2>Entradas</h2>
+          <!-- Itens do cardápio serão carregados dinamicamente via JavaScript -->
+        </article>
+
+        <!-- Cardápio de pratos principais -->
+        <article class="card-categoria">
+          <h2>Pratos Principais</h2>
+          <!-- Itens do cardápio serão carregados dinamicamente via JavaScript -->
+        </article>
+
+        <!-- Cardápio de sobremesas -->
+        <article class="card-categoria">
+          <h2>Sobremesas</h2>
+          <!-- Itens do cardápio serão carregados dinamicamente via JavaScript -->
+        </article>
+
+        <!-- Cardápio de bebidas -->
+        <article class="card-categoria">
+          <h2>Bebidas</h2>
+          <!-- Itens do cardápio serão carregados dinamicamente via JavaScript -->
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé do site -->
+  <footer class="rodape">
+    <div class="container">Seu restaurante - Todos os direitos reservados.<br>
+      Desenvolvido por: Fabrestack
+    </div>
+  </footer>
+  <!-- Script específico da página do cardápio -->
+  <script src="src/js/cardapio.js"></script>
+</body>
+</html>

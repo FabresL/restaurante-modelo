@@ -1,0 +1,690 @@
+/**
+ * Arquivo CSS para a página inicial do restaurante (index.html)
+ * Define estilos para layout, tipografia, componentes e responsividade
+ */
+
+/* ========== VARIÁVEIS CSS ========== */
+:root {
+  /* Cores principais */
+  --bg: #fff8ee;          /* Fundo principal */
+  --panel: #fffdf8;       /* Fundo de painéis/cards */
+  --text: #1f1a17;        /* Cor do texto principal */
+  --muted: #665f59;       /* Cor do texto secundário */
+  --brand: #db4f17;       /* Cor da marca principal */
+  --brand-dark: #a63c12;  /* Cor da marca escura */
+  --accent: #0f766e;      /* Cor de destaque */
+  --line: #f0ddc9;        /* Cor das linhas/bordas */
+  --shadow: 0 14px 34px rgba(100, 47, 18, 0.14); /* Sombra padrão */
+  --radius: 18px;         /* Raio de borda padrão */
+}
+
+/* ========== RESET E BASE ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  /* Fundo com gradientes sutis */
+  background:
+    radial-gradient(circle at 15% 10%, #ffe2c4 0, transparent 36%),
+    radial-gradient(circle at 90% 30%, #ffd5a6 0, transparent 34%),
+    var(--bg);
+  line-height: 1.6;
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+html {
+  scroll-behavior: smooth; /* Rolagem suave */
+}
+
+/* Margens de scroll para âncoras */
+#destaques {
+  scroll-margin-top: 88px;
+}
+
+#menu {
+  scroll-margin-top: 118px;
+}
+
+#sobre {
+  scroll-margin-top: 88px;
+}
+
+/* ========== LAYOUT ========== */
+.container {
+  width: min(1120px, 92vw); /* Largura máxima responsiva */
+  margin: 0 auto;
+}
+
+/* ========== CABEÇALHO ========== */
+.cabecalho-site {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px); /* Efeito de blur no fundo */
+  background: rgba(255, 248, 238, 0.86);
+  border-bottom: 1px solid rgba(226, 175, 137, 0.35);
+}
+
+.navegacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+}
+
+.logo-marca {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.4rem); /* Tamanho responsivo */
+  letter-spacing: 0.05em;
+  color: var(--brand-dark);
+  text-decoration: none;
+}
+
+.navegacao ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  font-weight: 700;
+  align-items: center;
+}
+
+.navegacao a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.navegacao a:hover {
+  color: var(--brand);
+}
+
+/* ========== BOTÕES ========== */
+.botao {
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.botao:active {
+  transform: translateY(1px);
+}
+
+.botao-primario {
+  background: var(--brand);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(174, 64, 19, 0.28);
+}
+
+.botao-primario:hover {
+  background: #f05b1e;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 26px rgba(174, 64, 19, 0.33);
+}
+
+.botao-contorno {
+  color: var(--brand-dark);
+  border: 2px solid rgba(166, 60, 18, 0.22);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.botao-contorno:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+/* ========== SEÇÃO HERO ========== */
+.secao-hero {
+  padding: 26px 0 18px;
+}
+
+.grade-hero {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1.1fr 0.9fr; /* Proporção responsiva */
+  align-items: center;
+}
+
+.selo {
+  display: inline-block;
+  background: #fff0de;
+  color: var(--brand-dark);
+  border: 1px solid #ffd6b3;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 7px 14px;
+  margin-bottom: 18px;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+/* ========== TIPOGRAFIA ========== */
+h1, h2, h3 {
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 7vw, 4.4rem); /* Tamanho muito responsivo */
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+
+.texto-destaque {
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  max-width: 56ch; /* Limita largura do texto */
+  margin-bottom: 26px;
+}
+
+.linha-acoes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.estatisticas-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.item-estatistica {
+  background: rgba(255, 255, 255, 0.73);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 10px 14px;
+  min-width: 120px;
+}
+
+.item-estatistica strong {
+  display: block;
+  font-size: 1.15rem;
+}
+
+/* ========== CARDS ========== */
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(140deg, #fffdf9, #fff2e5);
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.destaque-menu {
+  position: relative;
+  overflow: hidden;
+}
+
+.destaque-menu::before {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  right: -90px;
+  top: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(219, 79, 23, 0.25), transparent 70%);
+}
+
+.item-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px dashed #e8ccb3;
+  padding: 12px 0;
+  gap: 14px;
+}
+
+.item-menu:last-child {
+  border-bottom: none;
+}
+
+.item-menu span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.item-menu strong {
+  color: var(--brand-dark);
+  white-space: nowrap;
+  font-size: 1.05rem;
+}
+
+/* ========== SEÇÕES ========== */
+.secao {
+  padding: 20px 0 44px;
+}
+
+.secao h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 18px;
+  letter-spacing: 0.02em;
+}
+
+.grade-3 {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-prato {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transform: translateY(18px);
+  opacity: 0;
+  transition: transform 0.55s ease, opacity 0.55s ease;
+}
+
+.card-prato.visivel {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.foto-prato {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.conteudo-prato {
+  padding: 16px;
+}
+
+.conteudo-prato h3 {
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+
+.conteudo-prato p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 10px;
+}
+
+.meta-prato {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.meta-prato .preco {
+  color: var(--brand-dark);
+}
+
+/* ========== SEÇÃO SOBRE ========== */
+.sobre {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+.sobre .card {
+  background: #fffdf9;
+}
+
+.lista-info {
+  list-style: none;
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.lista-info li {
+  background: #fff3e7;
+  border: 1px solid #f2d7bd;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 600;
+  color: #4d4038;
+}
+
+/* Item estático (Terça a Domingo) — mesma cor dos clicáveis */
+.lista-info li.info-estatica {
+  color: var(--brand-dark);
+  font-weight: 700;
+}
+
+/* Links clicáveis dentro da lista — sobrescrevem a cor do li */
+.lista-info li .link-maps-desktop,
+.lista-info li .link-info {
+  color: var(--brand-dark);
+  text-decoration: none;
+  font-weight: 700;
+  display: block;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.lista-info li .link-maps-desktop:hover,
+.lista-info li .link-info:hover {
+  color: var(--brand);
+  text-decoration: underline;
+}
+
+.destaque-menu h2 {
+  margin-top: 18px;
+}
+
+/* ========== CARROSSEL ========== */
+.carrossel-wrapper {
+  position: relative;
+  width: calc(100% + 44px);
+  margin: -22px -22px 0 -22px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
+  height: 170px;
+}
+
+.carrossel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carrossel-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--brand-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  transition: background 0.2s, transform 0.2s;
+  z-index: 2;
+}
+
+.carrossel-btn:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carrossel-prev { left: 10px; }
+.carrossel-next { right: 10px; }
+
+.carrossel-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.carrossel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.55);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.carrossel-dot.ativo {
+  background: #fff;
+  transform: scale(1.25);
+}
+
+/* ========== ANIMAÇÕES ========== */
+.subir-suave {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: subirSuave 0.8s ease forwards;
+}
+
+.atraso-1 { animation-delay: 0.1s; }
+.atraso-2 { animation-delay: 0.25s; }
+.atraso-3 { animation-delay: 0.4s; }
+
+@keyframes subirSuave {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+/* Tablets */
+@media (max-width: 930px) {
+  .grade-hero, .sobre {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .secao-hero {
+    padding: 34px 0 44px;
+  }
+
+  .navegacao {
+    flex-wrap: wrap;
+  }
+
+  .navegacao ul {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    padding-top: 8px;
+  }
+
+  .item-estatistica {
+    min-width: 142px;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 640px) {
+  .secao-hero {
+    padding: 24px 0 36px;
+  }
+
+  .navegacao {
+    padding: 10px 0;
+  }
+
+  .logo-marca {
+    font-size: 1.6rem;
+  }
+
+  .navegacao ul {
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 2px;
+    scrollbar-width: thin;
+  }
+
+  .navegacao ul li {
+    flex: 0 0 auto;
+  }
+
+  .navegacao .botao {
+    padding: 10px 16px;
+  }
+
+  .texto-destaque {
+    margin-bottom: 20px;
+  }
+
+  .grade-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .foto-prato {
+    height: 165px;
+  }
+
+  .linha-acoes .botao {
+    width: 100%;
+  }
+
+  .estatisticas-hero {
+    gap: 8px;
+  }
+
+  .item-estatistica {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 0;
+  }
+
+  .item-estatistica strong {
+    font-size: 1.05rem;
+  }
+}
+
+/* ========== CARROSSEL HERO MOBILE ========== */
+.carrossel-hero-mobile {
+  display: none;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 200px;
+  margin-bottom: 26px;
+  box-shadow: var(--shadow);
+}
+
+.carrossel-hero-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carrossel-hero-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.carrossel-hero-prev { left: 10px; }
+.carrossel-hero-next { right: 10px; }
+
+@media (max-width: 640px) {
+  .texto-desktop {
+    display: none;
+  }
+  .carrossel-hero-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .destaque-menu {
+    display: none;
+  }
+}
+
+/* ========== RODAPÉ ========== */
+.rodape {
+  padding: 10px 0 14px;
+  color: #5e544d;
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+    /* ── Mapa mobile/tablet ── */
+    .mapa-mobile-tablet {
+      display: none;
+      padding: 0;
+      background: transparent;
+      border: none;
+    }
+
+    @media (max-width: 930px) {
+      .mapa-mobile-tablet {
+        display: block;
+      }
+    }
+
+    /* ── Nossa Casa: desktop mostra tudo, mobile/tablet tem toggle ── */
+    .texto-nossa-casa {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .btn-ler-sobre {
+      display: none;
+    }
+
+    @media (max-width: 930px) {
+      .texto-nossa-casa {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin-bottom: 0;
+        transition: max-height 0.45s ease, opacity 0.35s ease, margin-bottom 0.3s ease;
+      }
+
+      .texto-nossa-casa.expandido {
+        max-height: 600px;
+        opacity: 1;
+        margin-bottom: 14px;
+      }
+
+      .btn-ler-sobre {
+        display: inline-block;
+        background: none;
+        border: none;
+        padding: 0;
+        font-family: "Manrope", sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: var(--brand);
+        cursor: pointer;
+        transition: color 0.2s ease;
+      }
+
+      .btn-ler-sobre:hover {
+        color: var(--brand-dark);
+        text-decoration: underline;
+      }
+
+      /* Nav centralizada no mobile */
+      .navegacao ul {
+        justify-content: center;
+      }
+    }

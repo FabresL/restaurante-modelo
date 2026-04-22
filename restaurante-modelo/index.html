@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Link para o arquivo CSS específico da página inicial -->
+  <link rel="stylesheet" href="src/css/restaurante.css">
+  <title>Seu Restaurante | Página Inicial</title>
+  <!-- Links para fontes do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Estilo inline para scroll-behavior e margem do elemento #informacoes -->
+  <style>
+    #informacoes { scroll-margin-top: 88px; }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho do site com navegação -->
+  <header class="cabecalho-site">
+    <div class="container navegacao">
+      <!-- Logo do restaurante -->
+      <a class="logo-marca" href="#">Seu Restaurante</a>
+      <!-- Menu de navegação -->
+      <ul>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Início</a></li>
+        <!-- Link para contato que rola suavemente para a seção de informações -->
+        <li><a href="#informacoes" id="link-contato" onclick="(function(e){e.preventDefault();var alvo=window.innerWidth<=930?document.getElementById('informacoes'):document.getElementById('sobre');if(alvo)alvo.scrollIntoView({behavior:'smooth'});})(event)">Contato</a></li>
+      </ul>
+      <!-- Botão para fazer reserva via WhatsApp -->
+      <a class="botao botao-primario" href="https://wa.me/5551998806267?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener noreferrer">Reservar</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Seção principal com hero e destaques -->
+    <section class="secao-hero">
+      <div class="container grade-hero">
+        <div>
+          <!-- Selo indicando o tipo de cozinha -->
+          <span class="selo subir-suave">COZINHA BRASILEIRA CONTEMPORÂNEA</span>
+          <!-- Título principal da página -->
+          <h1 class="subir-suave atraso-1">Sabor de brasa com alma de litoral</h1>
+          <!-- Descrição do restaurante (visível apenas em desktop) -->
+          <p class="texto-destaque subir-suave atraso-2 texto-desktop">
+            Ingredientes frescos, cortes especiais e frutos do mar selecionados diariamente.
+            Uma experiência autoral para almoço, jantar e encontros especiais.
+          </p>
+
+          <!-- Carrossel de imagens para dispositivos móveis -->
+          <div class="carrossel-hero-mobile subir-suave atraso-2" id="carrosselMobile">
+            <div class="carrossel-hero-track" id="carrosselMobileTrack">
+              <!-- Slides do carrossel com imagens de fundo -->
+              <div class="carrossel-hero-slide" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80');"></div>
+              <div class="carrossel-hero-slide" style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80');"></div>
+              <div class="carrossel-hero-slide" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80');"></div>
+              <div class="carrossel-hero-slide" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80');"></div>
+            </div>
+            <!-- Botões de navegação do carrossel -->
+            <button class="carrossel-btn carrossel-hero-prev" id="carrosselMobilePrev" aria-label="Anterior">&#8249;</button>
+            <button class="carrossel-btn carrossel-hero-next" id="carrosselMobileNext" aria-label="Próximo">&#8250;</button>
+            <!-- Indicadores (dots) do carrossel -->
+            <div class="carrossel-dots" id="carrosselMobileDots"></div>
+          </div>
+          <!-- Botões de ação: reservar mesa e ver cardápio -->
+          <div class="linha-acoes subir-suave atraso-3" id="reserva">
+            <a class="botao botao-primario" href="https://wa.me/5551998806267?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener noreferrer">Reservar mesa</a>
+            <a class="botao botao-contorno" href="cardapio.html">Ver cardápio</a>
+          </div>
+          <!-- Estatísticas do restaurante -->
+          <div class="estatisticas-hero subir-suave atraso-3">
+            <div class="item-estatistica"><strong>4.9</strong>avaliação média</div>
+            <div class="item-estatistica"><strong>12 anos</strong>de tradição</div>
+            <div class="item-estatistica"><strong>+18 mil</strong>clientes/ano</div>
+          </div>
+        </div>
+
+        <!-- Card lateral com menu da casa e carrossel -->
+        <aside class="card destaque-menu subir-suave atraso-2" id="menu">
+          <div class="carrossel-wrapper">
+            <div class="carrossel-track" id="carrosselTrack">
+              <!-- Slides do carrossel lateral -->
+              <div class="carrossel-slide" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80');"></div>
+              <div class="carrossel-slide" style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80');"></div>
+              <div class="carrossel-slide" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80');"></div>
+              <div class="carrossel-slide" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80');"></div>
+              <div class="carrossel-slide" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80');"></div>
+            </div>
+            <!-- Botões de navegação do carrossel lateral -->
+            <button class="carrossel-btn carrossel-prev" id="carrosselPrev" aria-label="Anterior">&#8249;</button>
+            <button class="carrossel-btn carrossel-next" id="carrosselNext" aria-label="Próximo">&#8250;</button>
+            <!-- Indicadores do carrossel lateral -->
+            <div class="carrossel-dots" id="carrosselDots"></div>
+          </div>
+          <!-- Título do menu da casa -->
+          <h2>Menu da Casa</h2>
+          <!-- Itens do menu com nome, descrição e preço -->
+          <div class="item-menu">
+            <div>
+              <h3>Prato 1</h3>
+              <span>Seu prato de comida</span>
+            </div>
+            <strong>R$ 86</strong>
+          </div>
+          <div class="item-menu">
+            <div>
+              <h3>Prato 2</h3>
+              <span>Seu prato de comida</span>
+            </div>
+            <strong>R$ 72</strong>
+          </div>
+          <div class="item-menu">
+            <div>
+              <h3>Prato 3</h3>
+              <span>Seu prato de comida</span>
+            </div>
+            <strong>R$ 94</strong>
+          </div>
+          <div class="item-menu">
+            <div>
+              <h3>Prato 4</h3>
+              <span>Seu prato de comida</span>
+            </div>
+            <strong>R$ 34</strong>
+          </div>
+          <div class="item-menu">
+            <div>
+              <h3>Prato 5</h3>
+              <span>Seu prato de comida</span>
+            </div>
+            <strong>R$ 34</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Seção sobre o restaurante -->
+    <section class="secao" id="sobre">
+      <div class="container sobre">
+        <!-- Card com descrição da casa -->
+        <article class="card">
+          <h2>Nossa Casa</h2>
+          <!-- Texto descritivo com funcionalidade de expandir/colapsar -->
+          <p id="texto-nossa-casa" class="texto-nossa-casa">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius neque enim, eu faucibus metus faucibus a. Aenean cursus ante vel vulputate convallis. Mauris elementum risus a diam luctus congue. Mauris venenatis magna vitae eros sodales, at eleifend neque convallis. Proin tristique dapibus interdum. Nulla risus mi, condimentum at vehicula sed, elementum eget mi. Etiam at nibh massa. Fusce malesuada semper augue, non viverra sem convallis id. Nulla pharetra ex id tempor elementum. Fusce varius, justo ac pulvinar mollis, nunc ipsum euismod est, nec vestibulum risus ex vel lectus.
+          </p>
+          <!-- Botão para expandir ou colapsar o texto -->
+          <button class="btn-ler-sobre" id="btn-ler-sobre" onclick="toggleNossaCasa()">Ler sobre...</button>
+        </article>
+
+        <!-- Card com informações de contato -->
+        <aside class="card" id="informacoes">
+          <h2>Informações</h2>
+          <ul class="lista-info">
+            <!-- Link para localização no Google Maps -->
+            <li>
+              <a class="link-maps-desktop" href="https://www.google.com/maps/place/Mercado+P%C3%BAblico+de+Porto+Alegre" target="_blank" rel="noopener noreferrer">📍 Porto Alegre - Rio Grande do Sul</a>
+            </li>
+            <!-- Mapa incorporado para dispositivos móveis/tablet -->
+            <li class="mapa-mobile-tablet">
+              <iframe
+                src="https://maps.google.com/maps?q=Mercado+P%C3%BAblico+de+Porto+Alegre,+RS&output=embed"
+                width="100%" height="200" style="border:0; border-radius:10px;"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </li>
+            <!-- Horário de funcionamento -->
+            <li class="info-estatica">📅 Terça a Domingo: 12h às 23h</li>
+            <!-- Link para reservas via WhatsApp -->
+            <li><a class="link-info" href="https://wa.me/5551998806267?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener noreferrer">📞 Reservas: (51) 99880-6267</a></li>
+            <!-- Link para Instagram -->
+            <li><a class="link-info" href="https://instagram.com/fabreslorenzo" target="_blank" rel="noopener noreferrer">📸 Instagram: @fabreslorenzo</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé do site -->
+  <footer class="rodape">
+    <div class="container">
+      Seu restaurante - Todos os direitos reservados.<br>
+      Desenvolvido por: Fabrestack
+    </div>
+  </footer>
+
+  <!-- Script específico da página inicial -->
+  <script src="src/js/restaurante.js"></script>
+  <!-- Script inline para a funcionalidade de toggle do texto "Nossa Casa" -->
+  <script>
+    /**
+     * Função para expandir ou colapsar o texto da seção "Nossa Casa"
+     */
+    function toggleNossaCasa() {
+      // Seleciona o elemento de texto e o botão
+      const texto = document.getElementById('texto-nossa-casa');
+      const btn = document.getElementById('btn-ler-sobre');
+      // Verifica se o texto está expandido
+      const aberto = texto.classList.contains('expandido');
+      // Alterna a classe 'expandido' no texto
+      texto.classList.toggle('expandido', !aberto);
+      // Atualiza o texto do botão baseado no estado
+      btn.textContent = aberto ? 'Ler sobre...' : 'Fechar ▲';
+    }
+  </script>
+</body>
+</html>

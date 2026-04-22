@@ -1,0 +1,70 @@
+{
+  "entradas": [
+    {
+      "nome": "Bruschetta da Casa",
+      "descricao": "Tomate confit, manjericão e parmesão",
+      "preco": 32
+    },
+    {
+      "nome": "Ceviche Tropical",
+      "descricao": "Peixe branco, manga e leite de tigre",
+      "preco": 44
+    },
+    {
+      "nome": "Bolinho de Costela",
+      "descricao": "Com maionese de ervas",
+      "preco": 38
+    }
+  ],
+  "pratosPrincipais": [
+    {
+      "nome": "Costela 12h",
+      "descricao": "Cozimento lento e finalização na brasa",
+      "preco": 128
+    },
+    {
+      "nome": "Linguine do Porto",
+      "descricao": "Frutos do mar, tomate confit e ervas",
+      "preco": 84
+    },
+    {
+      "nome": "Ancho Premium",
+      "descricao": "Legumes tostados e manteiga defumada",
+      "preco": 94
+    }
+  ],
+  "sobremesas": [
+    {
+      "nome": "Cheesecake de Goiabada",
+      "descricao": "Calda quente de frutas vermelhas",
+      "preco": 34
+    },
+    {
+      "nome": "Pudim de Pistache",
+      "descricao": "Com crocante de castanhas",
+      "preco": 28
+    },
+    {
+      "nome": "Mousse de Chocolate 70%",
+      "descricao": "Flor de sal e raspas de laranja",
+      "preco": 29
+    }
+  ],
+  "bebidas": [
+    {
+      "nome": "Drink da Casa",
+      "descricao": "Gin, tangerina e espuma cítrica",
+      "preco": 36
+    },
+    {
+      "nome": "Suco Natural",
+      "descricao": "Sabores sazonais",
+      "preco": 14
+    },
+    {
+      "nome": "Água com gás",
+      "descricao": "300ml",
+      "preco": 7
+    }
+  ]
+}
